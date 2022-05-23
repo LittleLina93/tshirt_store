@@ -1,7 +1,103 @@
-.body{
-
+header {
+	position: absolute;
+	z-index: 99999;
+	width: 100%;
+	height: 80px;
+    color:#424254;
+	background-color: #232323;
+	-webkit-transition: all 0.3s ease-in-out 0s;
+    -moz-transition: all 0.3s ease-in-out 0s;
+    -o-transition: all 0.3s ease-in-out 0s;
+    transition: all 0.3s ease-in-out 0s;
 }
+.nav {
+    align-items: center;
+    list-style:none inside;
+    margin:0;
+    padding:0;
+    text-align:center;
+    }
+.nav li {
+    display:block;
+    position:relative;
+    float:left;
+    background: #64908A; /* menu background color */
+    }
+.nav li a {
+    display:block;
+    padding:0;
+    text-decoration:none;
+    width:200px; /* this is the width of the menu items */
+    line-height:35px; /* this is the hieght of the menu items */
+    color:#ffffff; /* list item font color */
+    }
 
-.h1{
-
+.nav li li a {font-size:80%;} /* smaller font size for sub menu items */
+.nav li:hover {background:#424254;} /* highlights current hovered list item and the parent list items when hovering over sub menues */
+.nav ul {
+    position:absolute;
+    padding:0;
+    left:0;
+    display:none; /* hides sublists */
+    }
+.nav li:hover ul ul {display:none;} /* hides sub-sublists */
+.nav li:hover ul {display:block;} /* shows sublist on hover */
+.nav li li:hover ul {
+    display:block; /* shows sub-sublist on hover */
+    margin-left:200px; /* this should be the same width as the parent list item */
+    margin-top:-35px; /* aligns top of sub menu with top of list item */
+    }
+/*
+header .navbar {
+	padding: 17px 0px;
 }
+.background-header .navbar {
+	padding: 17px 0px;
+}
+.background-header {
+	top: 0;
+	position: fixed;
+	background-color: #fff!important;
+	box-shadow: 0px 1px 10px rgba(0,0,0,0.1);
+}*/
+body {
+    font-family: 'Poppins', sans-serif;
+    overflow-x: hidden;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+h1,h2,h3,h4,h5,h6 {
+    margin: 0px;
+}
+  p {
+      margin-bottom: 0px;
+      font-size: 14px;
+      font-weight: 300;
+      color: #4a4a4a;
+      line-height: 24px;
+  }
+a {
+      text-decoration: none!important;
+  }
+ul {
+      padding: 0;
+      margin: 0;
+      list-style: none;
+  }
+h1,h2,h3,h4,h5,h6 {
+      margin: 0px;
+  }
+.container {
+    justify-content: center;
+    display: flex;
+    flex-direction: row;
+    padding-left: 15px;
+    padding-right: 15px;
+    width: 100%;
+  }
+.row {
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+  
