@@ -1,5 +1,5 @@
 <?php
-    $appName = "Tshirt_Store"; //Ancien bioblog
+    $appName = "Tshirt Store"; 
 ?>
 
 <head>
@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><?= $appName ?><?= isset($title) ? " - $title" : '' ?></title>
-    <link rel="icon" type="image/x-icon" href="/bioblog/favicon.ico"/> <!-- Changer l'icone en tshirt-store -->
+    <link rel="icon" type="image/x-icon" href="/tshirt_store/favicon.ico"/> 
     <meta name="description" content="<?= $site_description ?>" />
 
     <meta property="og:type" content="article" />
@@ -23,9 +23,10 @@
     <meta name="twitter:card" content="summary" />
     <meta name="twitter:creator" content="<?= $appName ?>" />
 
-    <meta name="keywords" content="Bio, Restauration, Produits, Article" />
+    <meta name="keywords" content="T-shirt, Creation, Produits, Article" />
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+    <linl rel="stylesheet" href="index.css">
     <link href="//cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet">
 </head>
 
