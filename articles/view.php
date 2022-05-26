@@ -22,13 +22,13 @@
                             <time class="card-subtitle"><?= date_format($article["creationDate"], "d/m/Y") ?></time>
                             <?php
                                 try {
-                                    $quill = new \DBlackborough\Quill\Render($article["content"]);
-                                    $content = $quill->render();
+                                    $quill = new \DBlackborough\Quill\Render($article["creator"]);
+                                    $creator = $quill->render();
                                 } catch(Exception $e) {
-                                    $content = $article["content"];
+                                    $creator = $article["creator"];
                                 }
                             ?>
-                            <p class="card-text"><?= $content ?></p>
+                            <p class="card-text"><?= $creator ?></p>
                         </div>
                     </article>
                 </div>
