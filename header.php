@@ -16,14 +16,17 @@
         </ul>-->
         <a href="/tshirt_store/admin" class="btn btn-warning">Admin</a>
     </nav>
-    <div class="navbar">
-  <a href="index.php">Accueil</a>
-  <div class="subnav">
-    <button class="subnavbtn">Catégories <i class="fa fa-caret-down"></i></button>
-    <div class="subnav-content">
-      <a href="geek.html">Geek</a>
-      <a href="disney.html">Disney</a>
-      <a href="cities.html">Cities</a>
+    <div class=conteneur>
+        <div class="navbar">
+            <a href="index.php">Accueil</a>
+            <div class="subnav">
+                <button class="subnavbtn">Catégories <i class="fa fa-caret-down"></i></button>
+                <div class="subnav-content">
+                    <a href="geek.html">Geek</a>
+                    <a href="disney.html">Disney</a>
+                    <a href="cities.html">Cities</a>
+                </div>
+            </div>
+        </div>
     </div>
-  </div>
 </header>
