@@ -1,13 +1,17 @@
+<?php
+
+require_once './helpers/auth-helper.php';
+
+redirect('./articles', true);
+
+?>
+
 <!DOCTYPE html>
 <html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="index.css">
-    <title>T-shirt Store</title>
-</head>
-<a href="index.html"><h2>T-Shirt</h2><em>Store</em></a>
+<?php $title="Accueil"; require "./head.php"; ?>
+<body>
+    <?php require "./header.php"; ?>
+    <a href="index.html"><h2>T-Shirt</h2><em>Store</em></a>
 <div class="container">
     <div class="row">
         <div class="col-12">
@@ -67,7 +71,6 @@
         </div>
     </div>
 </div>
-<body>
-   
+    <?php require "./footer.php"; ?>
 </body>
 </html>
