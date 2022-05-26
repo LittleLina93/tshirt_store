@@ -1,6 +1,6 @@
 <?php
 
-require_once "../config/db.php";
+//require_once "../config/db.php";
 
 function getArticles($page) {
     global $db_default_connection;
