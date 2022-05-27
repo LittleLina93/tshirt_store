@@ -1,32 +1,33 @@
 <header>
-    <nav class="navbar navbar-light bg-light">
-        <img src="./images/logo/logo3.png" alt="logo">
-        <h1 class="navbar-brand mb-0 mr-auto"><a href="/tshirt_store"><?= $appName ?></a></h1>
-  <!--
-        <ul id="nav">
-            <li class="submenu"><a href="categories.html">Catégories</a></li>
-                <ul>
-                    <li><a href="geek.html">Geek</a></li>
-                    <li><a href="disney.html">Disney</a></li>
-                    <li><a href="cities.html">Cities</a></li>
-                    <li><a href="fun.html">Fun</a></li>
-                </ul>
-            </li>
-            <li><a href="panier.html">Panier</a></li>
-        </ul>-->
-        <a href="/tshirt_store/admin" class="btn btn-warning">Admin</a>
-    </nav>
-    <div class=conteneur>
-        <div class="navbar">
-            <a href="index.php">Accueil</a>
-            <div class="subnav">
-                <button class="subnavbtn">Catégories <i class="fa fa-caret-down"></i></button>
-                <div class="subnav-content">
-                    <a href="geek.html">Geek</a>
-                    <a href="disney.html">Disney</a>
-                    <a href="cities.html">Cities</a>
-                </div>
-            </div>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="index.php"><img src="C:\Users\Blues\Documents\Web Dev\ADB\tshirt_store" alt="logo"width="100" height="47"></a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="index.php">Accueil <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="categories.php" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Catégories
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="#">Geek</a>
+          <a class="dropdown-item" href="#">Disney</a>
+          <a class="dropdown-item" href="#">Cities</a>
+          <a class="dropdown-item" href="#">Fun</a>          
         </div>
-    </div>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link disabled" href="panier.php">Panier</a>
+      </li>
+    </ul>
+    <form class="form-inline my-2 my-lg-0">
+      <a href="/tshirt_store/admin" class="btn btn-warning">Admin</a>
+    </form>
+  </div>
+</nav>
 </header>
