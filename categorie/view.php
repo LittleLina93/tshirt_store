@@ -3,7 +3,7 @@
 
 <!DOCTYPE html>
 <html lang="fr">
-<?php $title="Articles"; $site_description="t-shirt"; require "../head.php"; ?>
+<?php $title="Catégories"; $site_description="Vous pouvez trouver ici toutes les catégories"; require "../head.php"; ?>
 <body>
     <?php require "../header.php"; ?>
 
@@ -11,26 +11,12 @@
 
     <div class="container mt-3">
         <div class="row">
-            <?php foreach($articles_list as $article): ?>
+            <?php foreach($categorie_list as $categorie): ?>
                 <div class="col-md-4 mb-4">
                     <article class="card">
-                        <?php if(isset($article['image'])): ?>
-                            <img class="card-img-top"
-                                src="<?= home_path($article["image"]) ?>"
-                                alt="Image of <?= $article["title"] ?>" />
-                        <?php endif; ?>
                         <div class="card-body">
-                            <h5 class="card-title"><?= $article["title"] ?></h5>
-                            <time class="card-subtitle"><?= date_format($article["creationDate"], "d/m/Y") ?></time>
-                            <?php
-                                try {
-                                    $quill = new \DBlackborough\Quill\Render($article["creator"]);
-                                    $creator = $quill->render();
-                                } catch(Exception $e) {
-                                    $creator = $article["creator"];
-                                }
-                            ?>
-                            <p class="card-text"><?= $creator ?></p>
+                            <h5 class="card-title"><?= $categorie["title"] ?></h5>
+                            <time class="card-subtitle"><?= date_format($categorie["creationDate"], "d/m/Y") ?></time>
                         </div>
                     </article>
                 </div>

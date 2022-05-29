@@ -17,7 +17,7 @@ function checkUser($name, $password) {
     $count = $stmt->rowCount();
     if ($count === 1) {
         $user = $stmt->fetch(PDO::FETCH_ASSOC);
-        if (password_verify($password, $user['password'])) {
+        if (hash('sha256', $password) === $user['password']) {
             return [
                 'name' => $user['name'],
                 'firstName' => $user['first_name'],

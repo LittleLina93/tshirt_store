@@ -18,7 +18,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         init_session();
         $_SESSION['login'] = $user;
         
-        $redirect = isset($_GET['redirect']) ? urldecode($_GET['redirect']) : '../articles' ;
+        $redirect = isset($_GET['redirect']) ? urldecode($_GET['redirect']) : '../admin' ;
         redirect($redirect);
     } else {
         $hasError = true;

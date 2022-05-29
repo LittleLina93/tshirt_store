@@ -13,3 +13,4 @@ function insertArticle($article) {
     $stmt->execute($article);
     return $stmt;
 }
+

@@ -37,15 +37,63 @@
             <div class="form-group">
                 <label>
                     Créateur
-                    <!-- <textarea
+                    <input
                         class="form-control"
+                        type="text"
                         name="creator"
-                        maxlength="1000"><?= isset($article) ? $_POST['creator'] : '' ?></textarea> -->
-                    <div id="editor"></div>
-                    <input type="hidden" name="creator" />
+                        placeholder="Creator"
+                        maxlength="50"
+                        value="<?= isset($article) ? $_POST['creator'] : '' ?>" />
                 </label>
                 <?php if (isset($validations) && isset($validations['creator'])): ?>
                     <p><?= $validations['creator'] ?></p>
+                <?php endif; ?>
+            </div>
+
+            <div class="form-group">
+                <label>
+                    Description
+                    <!-- <textarea
+                        class="form-control"
+                        name="description"
+                        maxlength="1000"><?= isset($article) ? $_POST['description'] : '' ?></textarea> -->
+                    <div id="editor"></div>
+                    <input type="hidden" name="description" />
+                </label>
+                <?php if (isset($validations) && isset($validations['description'])): ?>
+                    <p><?= $validations['description'] ?></p>
+                <?php endif; ?>
+            </div>
+
+            <div class="form-group">
+                <label>
+                    Prix
+                    <input
+                        class="form-control"
+                        type="text"
+                        name="price"
+                        placeholder="Price"
+                        maxlength="50"
+                        value="<?= isset($article) ? $_POST['price'] : '' ?>" />
+                </label>
+                <?php if (isset($validations) && isset($validations['price'])): ?>
+                    <p><?= $validations['price'] ?></p>
+                <?php endif; ?>
+            </div>
+
+            <div class="form-group">
+                <label>
+                    Stock
+                    <input
+                        class="form-control"
+                        type="int"
+                        name="stock"
+                        placeholder="Stock"
+                        maxlength="50"
+                        value="<?= isset($article) ? $_POST['stock'] : '' ?>" />
+                </label>
+                <?php if (isset($validations) && isset($validations['stock'])): ?>
+                    <p><?= $validations['stock'] ?></p>
                 <?php endif; ?>
             </div>
 
@@ -69,7 +117,7 @@
     <script>
         var quill = new Quill('#editor', {
             theme: 'snow',
-            placeholder: 'Ton super article ici !',
+            placeholder: 'Description du t-shirt !',
             modules: {
                 toolbar: [
                     [{ 'header': [2,3,4,false] }],

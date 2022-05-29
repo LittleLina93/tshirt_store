@@ -13,14 +13,14 @@ else {
 }
 
 ?>
-<?php $title="Accueil"; require "./head.php"; ?>
 <body>
 <html>
+<?php $title="Contact"; $site_description="Vous pouvez nous contacter"; require "../head.php"; ?>
+
   <head>
-  <?php $title="Accueil"; require "./header.php"; ?>
+  <?php $title="Accueil"; require "../header.php"; ?>
 	</head>  
   <body>
-  <?php require "./header.php"; ?>
         <h1>Contact</h1>
             <h2>Formulaire de contact</h2>
             <form method="POST">
@@ -36,6 +36,6 @@ else {
               </div>
               <button type="submit" href="/">Envoyer</button>
             </form>
-  <?php require "./footer.php"; ?>
+  <?php require "../footer.php"; ?>
   </body>
 </html>
