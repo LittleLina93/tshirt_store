@@ -14,3 +14,4 @@ function getSelfUrl() {
 function home_path($path) {
     return "http://localhost/tshirt_store/" . $path;
 }
+
