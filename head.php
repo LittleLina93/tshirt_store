@@ -1,5 +1,7 @@
 <?php
     $appName = "Tshirt Store"; 
+    require_once "../helpers/form-helper.php";
+
 ?>
 
 <head>
@@ -26,7 +28,7 @@
     <meta name="keywords" content="T-shirt, Creation, Produits, Article" />
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
-    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="<?= home_path("index.css") ?>">
     <link href="//cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet">
 </head>
 

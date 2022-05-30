@@ -1,8 +1,11 @@
 <?php
 
-require_once './helpers/auth-helper.php';
+require_once '../helpers/auth-helper.php';
 
 redirect('./accueil', true);
+
+$categorie = getCategorie();
+
 
 ?>
 

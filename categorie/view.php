@@ -22,15 +22,7 @@
                 </div>
             <?php endforeach; ?>
         </div>
-        <div>
-            <?php if ($page > 1): ?>
-                <a href="<?=getSelfUrl()?>?page=<?=$page-1?>" class="float-left btn btn-success">Précedent</a>
-            <?php endif; ?>
-            <?php if (count($articles_list) === ROW_PER_PAGE): ?>
-                <a href="<?=getSelfUrl()?>?page=<?=$page+1?>" class="float-right btn btn-success">Suivant</a>
-            <?php endif; ?>
-        </div>
-    </div>
+     
 
     <?php
 

@@ -8,9 +8,18 @@ body {
 header {
   background-color: #E8CAA4;
 }
+ul {
+  list-style: none;
+}
+li {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
 li :hover{
   background-color: #CC2A41;
 }
+
 
 footer {
   background-color: #E8CAA4;
@@ -19,13 +28,7 @@ footer {
   background-color: #CC2A41;
   color:#E8CAA4;
 }
-.item {
-  width: 30%;
-  display: flex;
-  border: 1px solid black;
-  box-sizing: border-box;
-  margin: 0;
-}
+
 /*
 .navbar {
   height: 50px;
