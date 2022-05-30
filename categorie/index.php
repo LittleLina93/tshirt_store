@@ -1,5 +1,5 @@
 <?php
-define('ROW_PER_PAGE', 3);
+define('ROW_PER_PAGE', 6);
 
 require "./model.php";
 
@@ -8,6 +8,6 @@ if (!empty($_GET["page"])) {
     $page = (int)$_GET["page"];
 }
 
-$categorie_list = getMappedCategorie($page);
+$articles = getArticles();
 
 require "./view.php";
