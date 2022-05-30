@@ -2,7 +2,8 @@
 
 require_once "../config/db.php";
 
-function insertArticle($article) {
+function insertArticle($article)
+{
     global $db_default_connection;
     if (isset($article['image'])) {
         $query = "INSERT INTO articles(title, creator, creation_date, image) VALUES(:title, :creator, now(), :image)";
@@ -13,4 +14,3 @@ function insertArticle($article) {
     $stmt->execute($article);
     return $stmt;
 }
-

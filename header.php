@@ -1,6 +1,6 @@
 <?php require_once "../helpers/form-helper.php";
 $categorie = getCategorie();
- ?>
+?>
 
 <header>
   <a class="navbar-brand" href="<?= home_path("accueil/index.php") ?>"><img src="<?= home_path("logo1.png") ?>" /></a>
@@ -20,14 +20,12 @@ $categorie = getCategorie();
           <div class="dropdown-menu" aria-labelledby="navbarDropdown">
             <?php foreach ($categorie as $c) : ?>
               <ul>
-                <li><a href="<?= home_path("categorie/index.php?id")?>=<?= $c['id'] ?>"><?= $c['title'] ?></a></li>
+                <li><a href="<?= home_path("categorie/index.php?id") ?>=<?= $c['id'] ?>"><?= $c['title'] ?></a></li>
               </ul>
 
             <?php endforeach ?>
         </li>
-      
-      <!--<a class="dropdown-item" href="<?= home_path("categorie/index.php") ?>">Geek</a>-->
-      
+
         </li>
         <li class="nav-item active">
           <a class="nav-link" href="../contact/index.php">Contact</a>

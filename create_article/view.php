@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html lang="fr">
-<?php $title="Rajouter nouvelle création"; $site_description="Venez rajouter votre nouvelle création"; require "../head.php"; ?>
+<?php $title = "Rajouter nouvelle création";
+$site_description = "Venez rajouter votre nouvelle création";
+require "../head.php"; ?>
+
 <body>
     <style>
         .ql-container.ql-snow.-error {
@@ -12,24 +15,14 @@
     <div class="container">
         <h1>Nouvelle création</h1>
 
-        <form
-            action=""
-            method="POST"
-            enctype="multipart/form-data"
-            >
-            
+        <form action="" method="POST" enctype="multipart/form-data">
+
             <div class="form-group">
                 <label>
                     Nom
-                    <input
-                        class="form-control"
-                        type="text"
-                        name="title"
-                        placeholder="Title"
-                        maxlength="50"
-                        value="<?= isset($article) ? $_POST['title'] : '' ?>" />
+                    <input class="form-control" type="text" name="title" placeholder="Title" maxlength="50" value="<?= isset($article) ? $_POST['title'] : '' ?>" />
                 </label>
-                <?php if (isset($validations) && isset($validations['title'])): ?>
+                <?php if (isset($validations) && isset($validations['title'])) : ?>
                     <p><?= $validations['title'] ?></p>
                 <?php endif; ?>
             </div>
@@ -37,15 +30,9 @@
             <div class="form-group">
                 <label>
                     Créateur
-                    <input
-                        class="form-control"
-                        type="text"
-                        name="creator"
-                        placeholder="Creator"
-                        maxlength="50"
-                        value="<?= isset($article) ? $_POST['creator'] : '' ?>" />
+                    <input class="form-control" type="text" name="creator" placeholder="Creator" maxlength="50" value="<?= isset($article) ? $_POST['creator'] : '' ?>" />
                 </label>
-                <?php if (isset($validations) && isset($validations['creator'])): ?>
+                <?php if (isset($validations) && isset($validations['creator'])) : ?>
                     <p><?= $validations['creator'] ?></p>
                 <?php endif; ?>
             </div>
@@ -60,7 +47,7 @@
                     <div id="editor"></div>
                     <input type="hidden" name="description" />
                 </label>
-                <?php if (isset($validations) && isset($validations['description'])): ?>
+                <?php if (isset($validations) && isset($validations['description'])) : ?>
                     <p><?= $validations['description'] ?></p>
                 <?php endif; ?>
             </div>
@@ -68,15 +55,9 @@
             <div class="form-group">
                 <label>
                     Prix
-                    <input
-                        class="form-control"
-                        type="text"
-                        name="price"
-                        placeholder="Price"
-                        maxlength="50"
-                        value="<?= isset($article) ? $_POST['price'] : '' ?>" />
+                    <input class="form-control" type="text" name="price" placeholder="Price" maxlength="50" value="<?= isset($article) ? $_POST['price'] : '' ?>" />
                 </label>
-                <?php if (isset($validations) && isset($validations['price'])): ?>
+                <?php if (isset($validations) && isset($validations['price'])) : ?>
                     <p><?= $validations['price'] ?></p>
                 <?php endif; ?>
             </div>
@@ -84,15 +65,9 @@
             <div class="form-group">
                 <label>
                     Stock
-                    <input
-                        class="form-control"
-                        type="int"
-                        name="stock"
-                        placeholder="Stock"
-                        maxlength="50"
-                        value="<?= isset($article) ? $_POST['stock'] : '' ?>" />
+                    <input class="form-control" type="int" name="stock" placeholder="Stock" maxlength="50" value="<?= isset($article) ? $_POST['stock'] : '' ?>" />
                 </label>
-                <?php if (isset($validations) && isset($validations['stock'])): ?>
+                <?php if (isset($validations) && isset($validations['stock'])) : ?>
                     <p><?= $validations['stock'] ?></p>
                 <?php endif; ?>
             </div>
@@ -100,11 +75,7 @@
             <div class="form-group">
                 <label>
                     Image
-                    <input
-                        class="form-control"
-                        type="file"
-                        name="image"
-                        accept="image/*" />
+                    <input class="form-control" type="file" name="image" accept="image/*" />
                 </label>
             </div>
 
@@ -120,7 +91,9 @@
             placeholder: 'Description du t-shirt !',
             modules: {
                 toolbar: [
-                    [{ 'header': [2,3,4,false] }],
+                    [{
+                        'header': [2, 3, 4, false]
+                    }],
                     ['bold', 'italic'],
                     ['video'],
                     ['clean']
@@ -142,4 +115,5 @@
         };
     </script>
 </body>
+
 </html>

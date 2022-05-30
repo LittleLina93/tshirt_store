@@ -8,7 +8,7 @@ if (!empty($_GET["page"])) {
     $page = (int)$_GET["page"];
 }
 
-$id = $_GET['id']; 
+$id = $_GET['id'];
 $articles = getArticles($id);
 
 

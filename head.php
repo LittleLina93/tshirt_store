@@ -1,6 +1,6 @@
 <?php
-    $appName = "Tshirt Store"; 
-    require_once "../helpers/form-helper.php";
+$appName = "Tshirt Store";
+require_once "../helpers/form-helper.php";
 
 ?>
 
@@ -9,13 +9,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><?= $appName ?><?= isset($title) ? " - $title" : '' ?></title>
-    <link rel="icon" type="image/x-icon" href="/tshirt_store/favicon.ico"/> 
+    <link rel="icon" type="image/x-icon" href="/tshirt_store/favicon.ico" />
     <meta name="description" content="<?= $site_description ?>" />
 
     <meta property="og:type" content="article" />
     <meta property="og:title" content="<?= $appName ?><?= isset($title) ? " - $title" : '' ?>" />
     <meta property="og:site_name" content="<?= $appName ?>" />
-    <?php if(isset($site_description)): ?>
+    <?php if (isset($site_description)) : ?>
         <meta property="og:description" content="<?= $site_description ?>" />
     <?php endif; ?>
     <meta property="og:image" content="https://planetezerodechet.fr/wp-content/uploads/2020/07/manger-bio-nature-spains-1152x768.jpg" />
@@ -33,12 +33,12 @@
 </head>
 
 <!-- <?php
-if (isset($title)) {
-    echo $title;
-} else {
-    echo '';
-}
-?>
+        if (isset($title)) {
+            echo $title;
+        } else {
+            echo '';
+        }
+        ?>
 
 <?= isset($title) ? $title : '' ?>
 

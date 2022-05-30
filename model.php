@@ -76,6 +76,3 @@ function getCategorie() {
 
     return $categorie;
 }
-
-
-?>

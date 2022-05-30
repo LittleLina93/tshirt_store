@@ -2,7 +2,8 @@
 
 require_once "../config/db.php";
 
-function getArticles($id) {
+function getArticles($id)
+{
     global $db_default_connection;
     $query = "SELECT * FROM articles JOIN categorie_articles ON categorie_articles.ID_Vetement = articles.id JOIN categorie ON categorie.ID = categorie_articles.ID_Categorie WHERE categorie_articles.ID_Categorie = :id ORDER BY creation_date DESC;";
     $stmt = $db_default_connection->prepare($query);
@@ -13,7 +14,7 @@ function getArticles($id) {
 
     if ($count > 0) {
         // Fetch le prochain article et le sauver dans la variable $article
-        while($article = $stmt->fetch(PDO::FETCH_ASSOC)) {
+        while ($article = $stmt->fetch(PDO::FETCH_ASSOC)) {
             $mapped_articles = [
                 "id" => +$article["id"],
                 "title" => $article["title"],

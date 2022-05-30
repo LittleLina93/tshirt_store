@@ -8,7 +8,8 @@ prevent_not_connected(true);
 
 #region Post logic
 
-function validateInputs($inputs) {
+function validateInputs($inputs)
+{
     $errors = [];
     if (empty(trim($inputs['title']))) {
         $errors['title'] = 'Title is required';
@@ -21,7 +22,7 @@ function validateInputs($inputs) {
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') { // if (isset($_POST))
     $validations = validateInputs($_POST);
-    
+
     $article = [
         'title' => sanitize_input($_POST['title']),
         'creator' => $_POST['creator']

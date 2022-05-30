@@ -2,16 +2,18 @@
 
 require_once "../config/db.php";
 
-function getArticles($page) {
+function getArticles($page)
+{
     global $db_default_connection;
-    $offset = ($page-1) * ROW_PER_PAGE;
+    $offset = ($page - 1) * ROW_PER_PAGE;
     $query = "SELECT id, title, creator, creation_date, image FROM articles LIMIT {$offset}, " . ROW_PER_PAGE;
     $stmt = $db_default_connection->prepare($query);
     $stmt->execute();
     return $stmt;
 }
 
-function getMappedArticles($page) {
+function getMappedArticles($page)
+{
     $stmt = getArticles($page);
     $count = $stmt->rowCount();
 
@@ -19,7 +21,7 @@ function getMappedArticles($page) {
 
     if ($count > 0) {
         // Fetch le prochain article et le sauver dans la variable $article
-        while($article = $stmt->fetch(PDO::FETCH_ASSOC)) {
+        while ($article = $stmt->fetch(PDO::FETCH_ASSOC)) {
             $mapped_article = [
                 "id" => +$article["id"],
                 "title" => $article["title"],
@@ -33,4 +35,3 @@ function getMappedArticles($page) {
 
     return $articles;
 }
-

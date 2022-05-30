@@ -53,6 +53,3 @@ function getRandomArticles() {
 
     return $articles;
 }
-
-
-?>
