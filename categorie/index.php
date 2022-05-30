@@ -8,6 +8,8 @@ if (!empty($_GET["page"])) {
     $page = (int)$_GET["page"];
 }
 
-$articles = getArticles();
+$id = $_GET['id']; 
+$articles = getArticles($id);
+
 
 require "./view.php";

@@ -10,8 +10,6 @@ require "../head.php"; ?>
 <body>
     <?php require "../header.php"; ?>
 
-<?php var_dump($articles) ?>
-
     <div class="container mt-3">
         <div class="row">
             <?php foreach ($articles as $a) : ?>
@@ -29,33 +27,34 @@ require "../head.php"; ?>
                 </div>
             <?php endforeach; ?>
         </div>
+    </div>
 
 
-        <?php
+    <?php
 
-        $nbr = 15;
-        function expose($nbr, $exp)
-        {
-            $result = $nbr;
+    $nbr = 15;
+    function expose($nbr, $exp)
+    {
+        $result = $nbr;
 
-            for ($i = 0; $i < ($exp - 1); $i++) {
-                $result = $result * $nbr;
-            }
-
-            return $result;
+        for ($i = 0; $i < ($exp - 1); $i++) {
+            $result = $result * $nbr;
         }
 
-        $number_to_expose = 5;
-        $exponant_to_apply = 20;
+        return $result;
+    }
 
-        $result = expose($number_to_expose, $exponant_to_apply);
-        // echo $result;
-        // echo '</br>';
+    $number_to_expose = 5;
+    $exponant_to_apply = 20;
 
-        // echo expose(10, 3);
-        ?>
+    $result = expose($number_to_expose, $exponant_to_apply);
+    // echo $result;
+    // echo '</br>';
 
-        <?php require "../footer.php"; ?>
+    // echo expose(10, 3);
+    ?>
+
+    <?php require "../footer.php"; ?>
 </body>
 
 </html>
