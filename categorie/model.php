@@ -16,12 +16,13 @@ function getArticles($id)
         // Fetch le prochain article et le sauver dans la variable $article
         while ($article = $stmt->fetch(PDO::FETCH_ASSOC)) {
             $mapped_articles = [
-                "id" => +$article["id"],
+                "id" => $article["id"],
                 "title" => $article["title"],
                 "creator" => $article["creator"],
                 "creationDate" => date_create($article["creation_date"]),
                 "image" => $article["image"],
-                "price" => $article["price"]
+                "price" => $article["price"],
+                "description" => $article["description"]
             ];
             array_push($articles, $mapped_articles);
         }

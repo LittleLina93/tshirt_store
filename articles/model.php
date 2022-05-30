@@ -2,36 +2,30 @@
 
 require_once "../config/db.php";
 
-function getArticles($page)
-{
+function get_article_by_id($id) {
     global $db_default_connection;
-    $offset = ($page - 1) * ROW_PER_PAGE;
-    $query = "SELECT id, title, creator, creation_date, image FROM articles LIMIT {$offset}, " . ROW_PER_PAGE;
-    $stmt = $db_default_connection->prepare($query);
-    $stmt->execute();
-    return $stmt;
-}
 
-function getMappedArticles($page)
-{
-    $stmt = getArticles($page);
+    $query = "SELECT * FROM articles JOIN categorie_articles ON categorie_articles.ID_Vetement = articles.id JOIN categorie ON categorie.ID = categorie_articles.ID_Categorie WHERE categorie_articles.ID_Categorie = :id ORDER BY creation_date DESC;";
+    $stmt = $db_default_connection->prepare($query);
+    $stmt->execute(['id' => $id]);
     $count = $stmt->rowCount();
 
-    $articles = [];
-
+    $mapped_articles = [];
     if ($count > 0) {
-        // Fetch le prochain article et le sauver dans la variable $article
-        while ($article = $stmt->fetch(PDO::FETCH_ASSOC)) {
-            $mapped_article = [
-                "id" => +$article["id"],
-                "title" => $article["title"],
-                "creator" => $article["creator"],
-                "creationDate" => date_create($article["creation_date"]),
-                "image" => $article["image"]
-            ];
-            array_push($articles, $mapped_article);
-        }
+        while ($article = $stmt->fetch(PDO::FETCH_ASSOC)){
+        $mapped_articles = [
+            "id" => $article["ID"],
+            "nom" => $article["title"],
+            "createur" => $article["creator"],
+            "date_creation" => $article["creation_date"],
+            "image" => $article["image"],
+            "prix" => $article["price"],
+            "stock" => $article["stock"],
+            "description" => $article["description"]
+        ];
+        array_push($articles, $mapped_articles);
     }
+}
 
-    return $articles;
+    return $mapped_articles;
 }

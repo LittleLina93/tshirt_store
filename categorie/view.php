@@ -17,11 +17,12 @@ require "../head.php"; ?>
                     <article class="card">
                         <img src="<?= home_path($a['image']) ?>" alt="Image of <?= $a["title"] ?>" class="card-img-top" />
                         <div class="card-body">
-                            <a href="/tshirt-store/articles/index.php?id=<?= $a['id'] ?>">
+                            <a href="../articles/index.php?id=<?= $a['id'] ?>">
                                 <h5 class="card-title">"<?= $a['title'] ?>"</h5>
                             </a>
-                            <p class="card-text"><?= $a['creator'] ?></p>
-                            <p class="card-text"><?= $a['price'] ?>€</p>
+                            <p class="card-text">Créateur : <?= $a['creator'] ?></p>
+                            <p class="card-text">"<?= $a['description'] ?>"</p>
+                            <p class="card-text">Prix : <?= $a['price'] ?>€</p>
                         </div>
                     </article>
                 </div>

@@ -1,13 +1,7 @@
 <?php
-define('ROW_PER_PAGE', 3);
 
 require "./model.php";
 
-$page = 1;
-if (!empty($_GET["page"])) {
-    $page = (int)$_GET["page"];
-}
-
-$articles_list = getMappedArticles($page);
+$articles = get_article_by_id($_GET['id']);
 
 require "./view.php";
